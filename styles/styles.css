@@ -13,18 +13,8 @@ body {
     height: 116px;
     font-weight: 400;
     align-items: center;
-    justify-cntent: space-between;
+    justify-content: space-between;
     padding: 16px 40px;
-}
-@media (min-width: 767px) and (max-width: 1199px) {
-    .header-content {
-        display: flex;
-        height: 116px;
-        font-weight: 400;
-        align-items: center;
-        justify-cntent: space-between;
-        padding: 16px 40px;
-    }
 }
 .logo {
     display: flex;
@@ -44,20 +34,23 @@ body {
     width: 610px;
     height: 32px;
 }
+.nav-header a:hover {
+    font-weight: 600;
+}
 .nav-header a {
     text-decoration: none;
     color: #202020;
     font-size: 20px;
     font-weight: 400;
 }
-@media (min-width: 767px) and (max-width: 1199px) {
-    .header-content {
-        display: flex;
-        height: 116px;
-        font-weight: 400;
-        align-items: center;
-        justify-cntent: space-between;
-        padding: 16px 40px;
+@media (min-width: 1200px) {
+    .menu {
+        display: none;
+    }
+}
+@media (max-width: 1199px) {
+    .nav-header {
+        display: none;
     }
 }
 /*Hero section*/
@@ -123,6 +116,7 @@ h6 {
 .dateTime {
     position: relative;
     display: flex;
+    align-content: end;
     gap: 2rem;
 }
 .dateTimeCalendar {
@@ -130,6 +124,7 @@ h6 {
     display: flex;
     flex: 1;
     flex-direction: column;
+    justify-content: flex-end;
     gap: 1rem;
     font-weight: 600;
 }
@@ -143,12 +138,11 @@ h6 {
     gap: 1rem;
 }
 .inputGroupDate {
-    /*display: block;*/
     flex: 1;
     flex-direction: column;
     position: relative;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: right;
     font-weight: 600;
 }
 .inputGroup input {
@@ -164,6 +158,7 @@ h6 {
     border: none;
     height: 53px;
     padding: 16px 24px 16px 40px;
+    margin-top: auto;
 }
 .inputGroupDate::before {
     position: absolute;
@@ -186,8 +181,29 @@ h6 {
     font-weight: 700;
     line-height: 30px;
 }
-@media (min-width: 767px) and (max-width: 1199px) {
+.findButton:hover {
+    background-color: #0050FF;
+}
+@media (max-width: 1199px) {
     .hero-image {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    h1 {
+        font-size: 32px;
+    }
+    h6 {
+        font-size: 11px;
+    }
+    .hero {
+        height: 883px;
+        padding: 24px 20px 128px;
+    }
+    .dateTime {
+        flex-direction: column;
+    }
+    .noSmall {
         display: none;
     }
 }
@@ -211,7 +227,7 @@ h6 {
     font-weight: 500;
     font-size: 20px;
 }
-@media (min-width: 767px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
     .facts {
         height: 23.75rem;
         flex-wrap: wrap;
@@ -219,6 +235,22 @@ h6 {
     }
     .infoBlock {
         flex: 0 0 50%;
+    }
+}
+@media (max-width: 767px) {
+    .facts {
+        height: 259px;
+        flex-wrap: wrap;
+        padding: 30px 20px;
+    }
+    .infoBlock {
+        flex: 0 0 50%;
+    }
+    .digits {
+        font-size: 40px;
+    }
+    .textFacts {
+        font-size: 16px;
     }
 }
 .glory {
@@ -294,11 +326,26 @@ h6 {
     display: block;
     border-radius: 10px;
 }
-@media (min-width: 767px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
     .photos {
         flex-direction: column;
     }
 }
+@media (max-width: 767px) {
+    .glory {
+        padding: 20px;
+    }
+    .glory h1 {
+        font-size: 32px;
+    }
+    .photos {
+        flex-direction: column;
+    }
+    .photoBlock3 {
+        flex-direction: column;
+    }
+}
+/*Apps section*/
 .apps {
     display: flex;
     flex-direction: column;
@@ -317,7 +364,7 @@ h6 {
     flex: 1;
     gap: 7rem;
 }
-@media (min-width: 767px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
     .apps {
         gap: 2rem;
     }
@@ -330,6 +377,32 @@ h6 {
         gap: 49px;
     }
 }
+@media (max-width: 767px) {
+    .apps {
+        padding: 32px 120px;
+        gap: 1rem;
+    }
+    .apps h1 {
+        font-size: 32px;
+        text-align: center;
+        flex: none;
+    }
+    .appsIcons {
+        width: 189px;
+        height: 210px;
+        flex-shrink: 0;
+        flex-direction: column;
+        gap: 45px;
+        overflow: hidden;
+    }
+    .appsIcons img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+/*FAQ section*/
 .faq {
     display: flex;
     flex-direction: column;
@@ -356,6 +429,18 @@ details[open] summary::after {
     font-size: 24px;
     content: "×";
 }
+@media (max-width: 767px) {
+    .faq {
+        padding: 4rem 1.25rem;
+    }
+    .faqList summary {
+        font-size: 16px;
+    }
+    .faqList div {
+        font-size: 16px;
+    }
+}
+/*Contacts section*/
 .contacts {
     display: flex;
     justify-content: center;
@@ -386,6 +471,19 @@ details[open] summary::after {
     color: #202020;
     text-align: center;
 }
+@media (max-width: 767px) {
+    .contacts {
+        width: 320px;
+        height: 341px;
+    }
+    .contactBlock h1 {
+        font-size: 36px;
+    }
+    .phone, .email {
+        font-size: 20px;
+    }
+}
+/*Footer section*/
 footer {
     display: flex;
     flex-direction: column;
@@ -442,8 +540,30 @@ footer {
     text-align: left;
     line-height: 300%;
 }
-@media (min-width: 767px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
     .footerContainer {
         flex-direction: column;
+    }
+}
+@media (max-width: 767px) {
+    footer {
+        height: auto;
+        padding: 4rem 1.25rem;
+    }
+    .footerContainer {
+        flex-direction: column;
+    }
+    .footerLinks {
+        flex-wrap: wrap;
+    }
+    .footerLogo {
+        width: auto;
+    }
+    .aboutLinks, .communityLinks {
+        flex: 0 1 auto;
+        width: 50%;
+    }
+    .socialsLinks {
+        flex: 0 1 100%;
     }
 }
