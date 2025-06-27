@@ -1,15 +1,15 @@
 # Wonders
 
-### Сайт для заказа автобусных билетов в Альпах
-Проект сделан в соответствии с макетом
+### Web site to order bus tickers in Alps
+The project is completed according to the design:
 https://www.figma.com/design/Qq0LN905byLasCfNboVzU2/Module-1-Wonders--Share-?node-id=0-1&t=flK13eJ60wwcXrHp-1
 
-При верстке использованы HTML, CSS и ограниченно JavaScript для обработки кнопки меню
+To complete the project I used HTML, CSS and some JavaScript for menu in the mobile mode
 
-Проект находится по адресу:
+Link to the project is at:
 https://github.com/vladsav33/Wonders
 
-Структура проекта:
+Project structure:
 root<br>
 -- assets<br>
 ---- icons<br>
