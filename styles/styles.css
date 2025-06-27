@@ -47,10 +47,43 @@ body {
     .menu {
         display: none;
     }
+    .nav-mobile-header {
+        display: none;
+    }
 }
 @media (max-width: 1199px) {
     .nav-header {
         display: none;
+    }
+    .nav-mobile-header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0578FF;
+        align-items: start;
+        padding: 128px 32px 391px;
+        gap: 48px;
+    }
+    .nav-mobile-header a {
+        color: white;
+        justify-items: left;
+        font-size: 48px;
+        text-decoration: none;
+    }
+    .header-content {
+        height: auto;
+        align-items: flex-start;
+    }
+    .nav-hidden {
+        display: none;
+    }
+    .menu {
+        cursor: pointer;
+    }
+}
+@media (max-width: 767px) {
+    .nav-mobile-header a {
+        font-size: 32px;
     }
 }
 /*Hero section*/
