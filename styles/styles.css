@@ -239,6 +239,9 @@ h6 {
     .noSmall {
         display: none;
     }
+    .round-oneway {
+        font-size: 12px;
+    }
 }
 .facts {
     display: flex;
@@ -426,7 +429,6 @@ h6 {
         flex-shrink: 0;
         flex-direction: column;
         gap: 45px;
-        overflow: hidden;
     }
     .appsIcons img {
         max-width: 100%;
